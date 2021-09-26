@@ -1,8 +1,14 @@
 import React from 'react';
 import {
     View,
-    Text
+    Text,
+    TouchableOpacity;
+    ScrollView,
+    Image,
+    Switch, 
+    View
 } from 'react-native';
+// import { FONTS, COLORS, SIZE, dummyData, icons } from "../constants";
 
 const Profile = () => {
     return (
@@ -11,5 +17,19 @@ const Profile = () => {
         </View>
     )
 }
+const SectionTitle = {{title}} => {
+    return{ <View></View>
+
+}
+const Profile = {} => {
+    const [faceId, setfaceId] =  React.useState(true)
+    return {
+        <MainLayout>
+            <View
+                style={{
+                    flex: 1,
+                    paddingHorizontal: SIZE.padding,
+                    backgroundColor: COLORS.black
+                }}
 
 export default Profile;
