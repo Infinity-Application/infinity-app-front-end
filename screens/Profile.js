@@ -79,7 +79,7 @@ const Setting = ({ title, value, type, onPress }) => {
 }
 const Profile = () => {
     const [faceId, setfaceId] =  React.useState(true)
-    return {
+    return ( 
         <MainLayout>
             <View
                 style={{
@@ -87,5 +87,122 @@ const Profile = () => {
                     paddingHorizontal: SIZE.padding,
                     backgroundColor: COLORS.black
                 }}
+            >
+                {/*Header*/}
+                <HeaderBar
+                    title="Profile"
+                />
 
+                {/* Details */}
+                <ScrollView>
+                    {/*Email & User Id*/}
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            marginTop: SIZES.radius
+                        }}
+                    >
+                        {/*Email and Id*/}
+                        <View
+                            style={{
+                                flex: 1,
+                            }}
+                        >
+                            <Text style={{ color: COLORS.white, ...FONTS.h3 }}>{dummyData.profile.email}</Text>
+                            <Text style={{ color: COLORS.lightGray3, ...FONTS.body4 }}>ID: {dummyData.profile.id}</Text>
+                        </View>
+
+                        {/* Status*/}
+                        <View
+                            style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <Image
+                                source={icons.verified}
+                                style={{
+                                    height: 25,
+                                    width: 25
+                                }}
+                            />
+                            <Text style={{ marginLeft: SIZES.base, color: COLORS.lightGreen, ...FONTS.body4 }}>Verified</Text>
+                        </View>
+                    </View>
+
+                    {/* APP */}
+                    <SectionTitle
+                        title="APP"
+                    />
+
+                    <Setting
+                        title="Launch Screen"
+                        value="Home"
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+
+                    <Setting
+                        title="Apperance"
+                        value="Dark"
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+
+                    {/*ACCOUNT*/}
+                    <SectionTitle
+                        title="ACCOUNT"
+                    />
+
+                    <Setting
+                        title="Payment Currency"
+                        value="USD"
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+
+                    <Setting
+                        title="Language"
+                        value="English"
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+
+                    {/* SECURITY */}
+                    <SectionTitle
+                        title="SECURITY"
+                    />
+
+                    <Setting
+                        title="FaceID"
+                        value={faceId}
+                        type="switch"
+                        onPress={(value) => setFaceId(value)}
+                    />
+
+                    <Setting
+                        title="Password Settings"
+                        value=""
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+
+                    <Setting
+                        title="Change Password"
+                        value=""
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+
+                    <Setting
+                        title="2-Factor Authentication"
+                        value=""
+                        type="button"
+                        onPress={() => console.log("Pressed")}
+                    />
+                </ScrollView>
+            </View>
+        </MainLayout>
+    )
+}
 export default Profile;
