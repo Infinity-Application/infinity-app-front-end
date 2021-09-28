@@ -6,16 +6,13 @@ import {
     ScrollView,
     Image,
     Switch
-   
 } from 'react-native';
 
 import { MainLayout } from "./";
 import { HeaderBar } from "../components";
-import { FONTS, COLORS, SIZE, dummyData, icons } from "../constants";
+import { FONTS, COLORS, SIZES, dummyData, icons } from "../constants";
 
-
-
-const SectionTitle = ({ title }) =>  {
+const SectionTitle = ({ title }) => {
     return (
         <View
             style={{
@@ -77,14 +74,17 @@ const Setting = ({ title, value, type, onPress }) => {
     }
 
 }
+
 const Profile = () => {
-    const [faceId, setfaceId] =  React.useState(true)
-    return ( 
+
+    const [faceId, setFaceId] = React.useState(true)
+
+    return (
         <MainLayout>
             <View
                 style={{
                     flex: 1,
-                    paddingHorizontal: SIZE.padding,
+                    paddingHorizontal: SIZES.padding,
                     backgroundColor: COLORS.black
                 }}
             >
@@ -205,4 +205,5 @@ const Profile = () => {
         </MainLayout>
     )
 }
+
 export default Profile;

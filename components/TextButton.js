@@ -1,14 +1,14 @@
 import React from 'react';
 import {
     Text,
-    TouchableOpecity
+    TouchableOpacity
 } from 'react-native';
 
 import { COLORS, FONTS } from "../constants";
 
-const TextButton = ({label, containerStyle, onPress}) => {
+const TextButton = ({ label, containerStyle, onPress }) => {
     return (
-        <TouchableOpecity
+        <TouchableOpacity
             style={{
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -20,8 +20,8 @@ const TextButton = ({label, containerStyle, onPress}) => {
             }}
             onPress={onPress}
         >
-            <Text style={{color: COLORS.white, ...FONTS.h3}}>{label}</Text>
-        </TouchableOpecity>
+            <Text style={{ color: COLORS.white, ...FONTS.h3 }}>{label}</Text>
+        </TouchableOpacity>
     )
 }
 

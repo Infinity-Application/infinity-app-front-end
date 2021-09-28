@@ -53,13 +53,16 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                     backgroundColor: COLORS.black
                 }}
             >
+                {/* Header - Current balance*/}
                 {renderCurrentBalanceSection()}
+                {/*Chart*/}
                 <Chart
                     containerStyle={{
                         marginTop: SIZES.radius
                     }}
                     chartPrices={selectedCoin ? selectedCoin?.sparkline_in_7d?.value : myHoldings[0]?.sparkline_in_7d?.value}
                 />
+                {/*Your  Assets*/}
                 <FlatList
                     data={myHoldings}
                     keyExtractor={item => item.id}
@@ -69,10 +72,12 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                     }}
                     ListHeaderComponent={
                         <View>
+                            {/* Section Title*/}
                             <Text style={{
                                 ...FONTS.h2, color:
                                     COLORS.white
                             }}>Your Asset</Text>
+                            {/*header lable */}
                             <View style={{
                                 flexDirection: 'row',
                                 marginTop: SIZES.radius
@@ -95,6 +100,7 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                                 }}
                                 onPress={() => setSelectedCoin(item)}
                             >
+                                {/*Assets*/}
                                 <View style={{
                                     flex: 1,
                                     flexDirection: 'row',
@@ -112,6 +118,7 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                                     <Text style={{ marginLeft: SIZES.radius, color: COLORS.white, ...FONTS.h4 }}>{item.name}</Text>
                                 </View>
 
+                                {/*Price*/}
                                 <View
                                     style={{
                                         flex: 1,
@@ -147,6 +154,7 @@ const Portfolio = ({ getHoldings, myHoldings }) => {
                                     </View>
                                 </View>
 
+                                {/*Holdings*/}
                                 <View
                                     style={{
                                         flex: 1,

@@ -6,16 +6,16 @@ import {
 
 import { COLORS, FONTS, SIZES } from "../constants";
 
-const HeaderBar = ({title}) => {
+const HeaderBar = ({ title }) => {
     return (
         <View
             style={{
-                height: 100,
+                height: 70,
                 paddingHorizontal: SIZES.radius,
                 justifyContent: 'flex-end'
             }}
         >
-            <Text style={{color: COLORS.white, ...FONTS.largeTitle}}>{title}</Text>
+            <Text style={{ color: COLORS.white, ...FONTS.h1 }}>{title}</Text>
         </View>
     )
 }
