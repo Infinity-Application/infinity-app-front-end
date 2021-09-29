@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@freakycoder/react-native-helpers": "^1.0.2",
+    "@freakycoder/react-native-material-textfield": "^1.0.0",
     "@rainbow-me/animated-charts": "^1.0.0-alpha.6",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^5.11.11",
@@ -21,9 +23,13 @@
     "react-native": "0.64.1",
     "react-native-chart-kit": "^6.11.0",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-helpers": "^0.0.2",
+    "react-native-login-screen": "^2.1.4",
+    "react-native-material-textfield": "^0.16.1",
     "react-native-reanimated": "^2.2.2",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.2.0",
+    "react-native-spinkit": "^1.5.1",
     "react-native-svg": "^12.1.1",
     "react-redux": "^7.2.5",
     "redux": "^4.1.1",
