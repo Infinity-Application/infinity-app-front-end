@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
-
+import { AuthProvider } from '../contexts/auth'
 
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
@@ -19,6 +19,9 @@ const store = createStore(
 const App = () => {
     return (
         <Provider store={store}>
+            <AuthProvider>
+        <Component {...pageProps} />
+    
         <NavigationContainer>
             <Stack.Navigator
                 screenOptions={{
@@ -32,6 +35,7 @@ const App = () => {
                 />
             </Stack.Navigator>
         </NavigationContainer>
+        </AuthProvider>
         </Provider>
     )
 }
