@@ -41,57 +41,6 @@ export default class App extends React.Component {
     }
 
     render() {
-        return (
 
-            <View>
-                <View style={styles.container}>
-                    <Image source={logo} style={styles.logo} />
-                </View>
-
-                <View style={styles.container2}>
-                    <Text style={styles.emailAdd}>
-                        Email
-                    </Text>
-                    <TextInput
-                        onChangeText={(text) => this.setState({ email: text })}
-                        type='email'
-                        value={this.state.email}
-                        keyboardType='email-address'
-                        style={styles.emailInput}
-                        placeholder={'Input Email Address'}
-                        underlineColorAndroid='transparent' />
-
-                </View>
-
-                <View style={styles.container3}>
-                    <Text style={styles.password}>
-                        Password
-                    </Text>
-                    <TextInput
-                        style={styles.passwordInput}
-                        placeholder={'Input Password'}
-                        secureTextEntry={true}
-                        underlineColorAndroid='transparent' />
-
-                </View>
-
-                <View style={styles.container4}>
-
-                    <View>
-                        <CheckBox value={this.state.check} onChange={() => this.CheckBoxText()} style={styles.rememberMe} />
-                    </View>
-                    <View>
-                        <Text style={styles.remember}>Remember me</Text>
-                    </View>
-                </View>
-
-                <TouchableOpacity style={styles.btnLogin} onPress={this.validates} >
-                    <Text style={styles.txtLogin}>Sign In</Text>
-                </TouchableOpacity>
-
-
-            </View>
-
-        );
     }
 }
