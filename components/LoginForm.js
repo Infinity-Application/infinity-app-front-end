@@ -1,46 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
-    StyleSheet, Text, View, Image, TextInput, Dimensions, ScrollView,
-    CheckBox, TouchableOpacity
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Button,
+  TouchableHighlight,
+  Image,
+  Alert
 } from 'react-native';
-import logo from './Logo.png'
 
-const { width: WIDTH } = Dimensions.get('window')
+export default class LoginView extends Component {
 
-export default class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            check: false,
-            email: '',
-        };
-        this.validates = this.validates.bind(this);
+  constructor(props) {
+    super(props);
+    state = {
+      email   : '',
+      password: '',
     }
+  }
 
-    CheckBoxText() {
-        this.setState({
-            check: !this.state.check,
-        })
-    }
+  onClickListener = (viewId) => {
+    Alert.alert("Alert", "Button pressed "+viewId);
+  }
 
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.inputContainer}>
+          <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'}}/>
+          <TextInput style={styles.inputs}
+              placeholder="Email"
+              keyboardType="email-address"
+              underlineColorAndroid='transparent'
+              onChangeText={(email) => this.setState({email})}/>
+        </View>
+        
+        <View style={styles.inputContainer}>
+          <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'}}/>
+          <TextInput style={styles.inputs}
+              placeholder="Password"
+              secureTextEntry={true}
+              underlineColorAndroid='transparent'
+              onChangeText={(password) => this.setState({password})}/>
+        </View>
 
-    validates = () => {
+        <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onClickListener('login')}>
+          <Text style={styles.loginText}>Login</Text>
+        </TouchableHighlight>
 
-        let text = this.state.email;
-        let emailError = this.state.emails;
-        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (reg.test(text) === false) {
-            console.warn("Invalid email")
-            this.setState({ email: text })
-            return false;
-        }
-        else {
-            this.setState({ email: text })
-            console.log("Email is Correct");
-        }
-    }
+        <TouchableHighlight style={styles.buttonContainer} onPress={() => this.onClickListener('restore_password')}>
+            <Text>Forgot your password?</Text>
+        </TouchableHighlight>
 
-    render() {
-
-    }
+        <TouchableHighlight style={styles.buttonContainer} onPress={() => this.onClickListener('register')}>
+            <Text>Register</Text>
+        </TouchableHighlight>
+      </View>
+    );
+  }
 }
