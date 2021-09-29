@@ -32,9 +32,10 @@
 
 # User Stories: https://github.com/orgs/Infinity-Application/projects/1
 ## Wireframe
-
+![Wireframe](images/w-frame.jpg)
 
 ## Domain Modeling
-
+![Domain Modeling](images/Domain_Modeling.png)
 
 ## Database
+![Database](images/database.jpg)
