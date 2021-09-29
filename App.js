@@ -21,7 +21,8 @@ import LoginScreen from "react-native-login-screen";
 import { View, Text } from 'react-native';
 
 const App = () => {
-    const x = true
+    const [x, setX] = React.useState(true)
+
     return (
 
         <Provider store={store}>
@@ -55,11 +56,14 @@ const App = () => {
                 onPressSettings={() => alert("Settings Button is pressed")}
                 passwordOnChangeText={(password) => console.log("Password: ", password)}
                 onPressLogin={() => {
-                    setSpinnerVisibility(true);
-                    setTimeout(() => {
-                        setSpinnerVisibility(false);
-                    }, 2000);
+                    // setSpinnerVisibility(true);
+                    // setTimeout(() => {
+                    //     setSpinnerVisibility(false);
+                    // }, 2000);
+
+
                 }}
+                onPressLogin={() => setX(false)}
                 onPressSignup={() => {
                     console.log("onPressSignUp is pressed");
                 }}
