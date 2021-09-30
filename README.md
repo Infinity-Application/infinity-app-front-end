@@ -17,7 +17,7 @@
 
 ## GitHub Projects: https://github.com/orgs/Infinity-Application/projects/1
 
-## Minimum features:
+## Minimum features
 
 -   Cryptocurrency price API
 -   Add cryptocurrency to portfolio 
