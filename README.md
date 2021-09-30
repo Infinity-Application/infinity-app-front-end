@@ -5,7 +5,7 @@
 1. Leen Hazimeh.
 2. Ahmad Shalein.
 3. Nadeem Mazahreh.
-4. Mohammad Talafha
+4. Mohammad Talafha.
 5. Abdelmajed Alabed
 6. Samer Odeh
 
