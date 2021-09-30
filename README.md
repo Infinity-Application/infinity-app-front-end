@@ -2,7 +2,7 @@
 
 ## Team Members:
 
-1. Leen Hazimeh
+1. Leen Hazimeh.
 2. Ahmad Shalein
 3. Nadeem Mazahreh
 4. Mohammad Talafha
