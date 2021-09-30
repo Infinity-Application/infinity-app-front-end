@@ -7,7 +7,7 @@
 3. Nadeem Mazahreh.
 4. Mohammad Talafha.
 5. Abdelmajed Alabed.
-6. Samer Odeh
+6. Samer Odeh.
 
 ## Project Description:
 
