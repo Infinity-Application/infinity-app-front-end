@@ -34,7 +34,7 @@
 ## Wireframe
 ![Wireframe](images/w-frame.jpg)
 
-## Domain Modeling
+## Domain Modeling:
 ![Domain Modeling](images/Domain_Modeling.png)
 
 ## Database
