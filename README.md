@@ -15,6 +15,9 @@
 
 ***In modern-day investing, crypto assets are very volatile, and one investor can have multiple cryptocurrency wallets, therefore, it can be hard to keep track of the value of the holdings, this app solves this issue by calculating the total holding value using an API.***
 
+## Deployment URL:
+***https://infinity-webpage.vercel.app/***
+
 ## GitHub Projects: https://github.com/orgs/Infinity-Application/projects/1
 
 ## Minimum features
